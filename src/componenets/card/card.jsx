@@ -4,12 +4,12 @@ import styles from './card.module.css';
 const DEFAULT_IMAGE = 'images/default_logo.png';
 
 const Card = ({card}) =>  {
-    const {name, title, email, message, theme, fileName, fileURL} = card;
+    const {name, title, email, message, theme, fileURL} = card;
     const url = fileURL || DEFAULT_IMAGE;
     return(
         // 두가지의 클래스를 사용할 때 백틱을 이용
         <li className={`${styles.card} ${getStyles(theme)}`}> 
-        <img className={styles.avatar} src={url} alt="profile photo"/>
+        <img className={styles.avatar} src={url} alt="profile"/>
         <div className={styles.info}>
             <h1 className={styles.name}>{name}</h1>
             <p className={styles.title}>{title}</p>

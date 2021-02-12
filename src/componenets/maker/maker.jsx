@@ -25,7 +25,7 @@ const Maker = ({ FileInput, authService, cardRepository}) => {
             setCards(cards);
         })
         return () => stopSync();
-    }, [userId])
+    }, [userId, cardRepository])
 
     //로그인
     useEffect(()=> {
@@ -36,7 +36,7 @@ const Maker = ({ FileInput, authService, cardRepository}) => {
                 history.push('/');
             }
         });
-    });
+    },[authService, userId, history]);
 
     const createOrUpdateCard =(card)=>{ 
         setCards(cards => {
