@@ -2,7 +2,7 @@
 <p>
 </p>
 
->You can log in and create a card through Google, Git Hub.
+>You can log in, log out and create a card through Google, Git Hub.
 
 
 ## Project period
